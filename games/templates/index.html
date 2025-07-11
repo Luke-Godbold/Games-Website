@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+</head>
+{% include "components/navbar.html" %}
+<body class="bg-neutral-700">
+  <style>
+    .aspect-16-9 { aspect-ratio: 16 / 9; }
+  </style>
+  <body class="bg-neutral-700 text-white min-h-screen flex flex-col px-4 py-10">
+
+    <div class="flex-grow flex items-center justify-center">
+      <div class="text-center w-full flex flex-col items-center space-y-8 p-10">
+  
+        <!-- YouTube Video Embed -->
+        <div class="overflow-hidden rounded-2xl shadow-2xl w-full max-w-[1500px] aspect-16-9 mx-auto border-4 border-white">
+          <iframe
+            class="w-full h-full rounded-2xl"
+            src="https://www.youtube.com/embed/BI9fgQY0d5I?autoplay=1&mute=1&loop=1&playlist=BI9fgQY0d5I&controls=0&modestbranding=1"
+            title="Rainbow Six Siege X Launch Trailer"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-6xl font-bold mb-4 text-white ">Welcome to Rainbow Six Siege</h1>
+      </h1>
+
+      <!-- Description of the website -->
+      <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
+        Dive into tactical combat, build your team, and explore the thrilling world of Rainbow Six Siege. Are you ready to breach?
+      </p>
+
+      <a href="{{ url_for('operators') }}"
+         class="inline-block mt-6 px-6 py-3 text-lg font-semibold text-white bg-red-600 rounded-xl shadow-lg hover:bg-red-700 transition-all duration-300">
+         Explore Operators →
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>

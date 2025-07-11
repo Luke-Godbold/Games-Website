@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forums</title>
+</head>
+{% include "components/navbar.html" %}
+
+<body class="bg-neutral-700 text-black min-h-screen">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <!-- Page Title -->
+    <h1 class="text-5xl text-white font-extrabold text-center mb-10">Rainbow Six Siege Forum</h1>
+
+    <!-- Forum Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-1 gap-8">
+
+
+        
+      <!-- MIDDLE COLUMN -->
+      <div class="space-y-6">
+        <!-- Chat History -->
+        <div class="bg-white p-4 rounded-md shadow shadow-2xl">
+          <h2 class="font-bold mb-2">Chat History</h2>
+          {% for f in fetch%}
+          <ul>
+            <li>{{f[1]}}: {{f[2]}}</li>
+          </ul>
+          {%endfor%}
+          <div class="space-y-2 text-sm">
+          </div>
+        </div>
+      <!-- RIGHT COLUMN -->
+      <div class="space-y-6">
+        
+               
+        <!-- Live Chat (Static Placeholder) -->
+        <div class="bg-white p-4 rounded-md shadow shadow-2xl">
+        <h2 class="font-bold mb-2">Live Chat</h2>  
+        <form method="POST" action="/forum">
+          
+          <textarea name="text1" class="w-full p-2 rounded-md border border-gray-300" placeholder="Type your message here..."></textarea>
+          <button type="submit" class="mt-2 bg-green-500 text-black px-4 py-2 rounded-md hover:bg-green-600 font-semibold">Send</button>
+        </form>  
+        </div>
+      </div>
+
+        <!-- Forum Activity -->
+        <!-- <div class="bg-white p-4 rounded-md shadow">
+          <h2 class="font-bold mb-2">Forum Activity</h2>
+        </div> -->
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

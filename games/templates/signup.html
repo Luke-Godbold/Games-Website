@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    {% include "components/navbar.html"%}
+    <body class="bg-neutral-700">
+  <!-- The Signup Form -->
+<body class="bg-neutral-700">    
+  <div>
+      <form method="POST" action="/signup" class="bg-white p-6 rounded-xl rounded-md mt-30 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col align-center justify-center text-center items-center gap-10 py-10 outline-1 outline-offset-1 outline-slate-50">
+      <h2 class="w-screen flex flex-row text-center align-center justify-center text-3xl font-bold p-5 text-black-300">Sign Up</h2>
+        {%if error%}
+        <p>{{error}}</p>
+        {%endif%}
+          <input type="text", name="user", placeholder="Username.." required class="rounded-md bg-neutral-800 px-3 py-3 placeholder:text-gray-50 text-white text-base outline-1 outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-50">
+          <input type="text", name="email", placeholder="Email.." required class="rounded-md bg-neutral-800 px-3 py-3 placeholder:text-gray-50 text-white text-base outline-1 outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-50">  
+          <input type="password", name="password", placeholder="Password.." required class="rounded-md bg-neutral-800 px-3 py-3 placeholder:text-gray-50 text-white text-base outline-1 outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-50">
+          <input type="password", name="c_password", placeholder="Confrim Password.." required class="rounded-md bg-neutral-800 px-3 py-3 placeholder:text-gray-50 text-white text-base outline-1 outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-50">
+          <button type="submit" class="rounded-md bg-green-400 px-3 py-2 font-semibold text-black shadow-xs hover:bg-green-700 cursor-pointer">Submit</button>  
+          <a href="/signin" class="font-bold">Sign In</a> 
+</form>
+</div>
+    </body>
+</html>

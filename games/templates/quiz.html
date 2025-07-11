@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+</head>
+{% include "components/navbar.html" %}
+
+<body class="bg-neutral-700  text-white ">
+    
+  <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-5xl font-extrabold text-red-600 mb-6 animate-pulse">Rainbow Six Siege Quiz</h1>
+    <p class="text-gray-300 mb-10">Test your knowledge of operators, tactics, and Siege lore!</p>
+
+    <!-- Quiz Box -->
+    <form id="quizForm" class="bg-neutral-900 rounded-xl shadow-2xl p-8 space-y-8 text-left">
+
+      <!-- Question 1 -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">1. Which operator uses the breaching hammer?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q1" value="Ash" class="mr-2">Ash</label>
+          <label><input type="radio" name="q1" value="Thermite" class="mr-2">Thermite</label>
+          <label><input type="radio" name="q1" value="Sledge" class="mr-2">Sledge</label> 
+          <label><input type="radio" name="q1" value="Zofia" class="mr-2">Zofia</label>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">2. What is the gadget of Valkyrie?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q2" value="Bulletproof Camera" class="mr-2">Bulletproof Camera</label>
+          <label><input type="radio" name="q2" value="Black Eye Camera" class="mr-2">Black Eye Camera</label> 
+          <label><input type="radio" name="q2" value="Welcome Mat" class="mr-2">Welcome Mat</label>
+          <label><input type="radio" name="q2" value="Shock Drone" class="mr-2">Shock Drone</label>
+        </div>
+      </div>
+      
+      <!-- Question 3 -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">3. Which operator can use a heartbeat sensor?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q3" value="Pulse" class="mr-2">Pulse</label> 
+          <label><input type="radio" name="q3" value="Caveira" class="mr-2">Caveira</label>
+          <label><input type="radio" name="q3" value="Mozzie" class="mr-2">Mozzie</label>
+          <label><input type="radio" name="q3" value="Doc" class="mr-2">Doc</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">4. What is the gadget of Fuze used for?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q4" value="Explosive cluster charges" class="mr-2">Explosive cluster charges</label> 
+          <label><input type="radio" name="q4" value="Healing teammates" class="mr-2">Healing teammates</label>
+          <label><input type="radio" name="q4" value="Blocking drones" class="mr-2">Blocking drones</label>
+          <label><input type="radio" name="q4" value="Reinforcing walls" class="mr-2">Reinforcing walls</label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">5. Which operator places bear traps?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q5" value="Frost" class="mr-2">Frost</label> 
+          <label><input type="radio" name="q5" value="Mira" class="mr-2">Mira</label>
+          <label><input type="radio" name="q5" value="Echo" class="mr-2">Echo</label>
+          <label><input type="radio" name="q5" value="Bandit" class="mr-2">Bandit</label>
+        </div>
+      </div>
+
+
+       <!-- Question 6 -->
+       <div>
+        <h2 class="text-xl font-bold mb-4">6.  Who is not effected by flash grenades?</h2>
+        <div class="grid gap-3">
+          <label><input type="radio" name="q6" value="Sledge" class="mr-2">Sledge</label> 
+          <label><input type="radio" name="q6" value="Warden" class="mr-2">Warden</label>
+          <label><input type="radio" name="q6" value="Echo" class="mr-2">Echo</label>
+          <label><input type="radio" name="q6" value="Thatcher" class="mr-2">Thatcher</label>
+        </div>
+      </div>
+
+  
+      <!-- Question 7 -->
+             <div>
+              <h2 class="text-xl font-bold mb-4">7. Who's gadget can be used to detect opponents through walls?</h2>
+              <div class="grid gap-3">
+                <label><input type="radio" name="q7" value="Sledge" class="mr-2">Sledge</label> 
+                <label><input type="radio" name="q7" value="Pulse" class="mr-2">Pulse</label>
+                <label><input type="radio" name="q7" value="Echo" class="mr-2">Echo</label>
+                <label><input type="radio" name="q7" value="Ash" class="mr-2">Ash</label>
+              </div>
+            </div>
+
+
+            <!-- Question 8 -->
+            <div>
+              <h2 class="text-xl font-bold mb-4">8. Who can electrify walls?</h2>
+              <div class="grid gap-3">
+                <label><input type="radio" name="q8" value="Mozzie" class="mr-2">Mozzie</label> 
+                <label><input type="radio" name="q8" value="Bandit" class="mr-2">Bandit</label>
+                <label><input type="radio" name="q8" value="Doc" class="mr-2">Doc</label>
+                <label><input type="radio" name="q8" value="Ash" class="mr-2">Ash</label>
+              </div>
+            </div>
+  
+             <!-- Question 9 -->
+             <div>
+              <h2 class="text-xl font-bold mb-4">9. Who can put traps on doors?</h2>
+              <div class="grid gap-3">
+                <label><input type="radio" name="q9" value="Jager" class="mr-2">Jager</label> 
+                <label><input type="radio" name="q9" value="Frost" class="mr-2">Frost</label>
+                <label><input type="radio" name="q9" value="Fuze" class="mr-2">Fuze</label>
+                <label><input type="radio" name="q9" value="Kapkan" class="mr-2">Kapkan</label>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div>
+              <h2 class="text-xl font-bold mb-4">10. Who uses cluster charges?</h2>
+              <div class="grid gap-3">
+                <label><input type="radio" name="q10" value="Vigil" class="mr-2">Vigil</label> 
+                <label><input type="radio" name="q10" value="Doc" class="mr-2">Doc</label>
+                <label><input type="radio" name="q10" value="Fuze" class="mr-2">Fuze</label>
+                <label><input type="radio" name="q10" value="Nomad" class="mr-2">Nomad</label>
+              </div>
+            </div>
+            
+      
+        <!-- Question 11 -->  
+        <div>
+          <h2 class="text-xl font-bold mb-4">11. Who is the fastest operator?</h2>
+            <div class="grid gap-3">
+            <label><input type="radio" name="q11" value="Ash" class="mr-2"> Ash</label>
+            <label><input type="radio" name="q11" value="Montagne"class="mr-2"> Montagne</label>
+            <label><input type="radio" name="q11" value="Lion"class="mr-2"> Lion</label>
+            <label><input type="radio" name="q11" value="Smoke"class="mr-2">Smoke</label>
+          </div>
+        </div>
+      
+          <!-- Question 12 -->  
+          <div>
+            <h2 class="text-xl font-bold mb-4">12. What does Mute block?</h2>
+              <div class="grid gap-3">
+            <label><input type="radio" name="q12" value="Drones"class="mr-2"> Drones</label>
+            <label><input type="radio" name="q12" value="Health"class="mr-2"> Health</label>
+            <label><input type="radio" name="q12" value="Voice"class="mr-2">Voice</label>
+            <label><input type="radio" name="q12" value="Gas"class="mr-2">Gas</label>
+          </div>
+        </div>
+           <!-- Question 13 -->  
+           <div>
+            <h2 class="text-xl font-bold mb-4">13. Who heals teammates?</h2>
+            <div class="grid gap-3">
+            <label><input type="radio" name="q13" value="Doc"class="mr-2"> Doc</label>
+            <label><input type="radio" name="q13" value="Sledge"class="mr-2"> Sledge</label>
+            <label><input type="radio" name="q13" value="IQ"class="mr-2">IQ</label>
+            <label><input type="radio" name="q13" value="Wamai"class="mr-2">Wamai</label>
+          </div>
+        </div>
+           <!-- Question 14 -->  
+           <div>
+            <h2 class="text-xl font-bold mb-4">14. Who has a ballistic shield?</h2>
+            <div class="grid gap-3">
+            <label><input type="radio" name="q14" value="Montagne"class="mr-2"> Montagne</label>
+            <label><input type="radio" name="q14" value="Finka"class="mr-2">Finka</label>
+            <label><input type="radio" name="q14" value="Clash"class="mr-2">Clash</label>
+            <label><input type="radio" name="q14" value="Sledge"class="mr-2">Sledge</label>
+          </div>
+        </div>
+
+        <!-- Question 15 -->  
+        <div>
+          <h2 class="text-xl font-bold mb-4">15. Who is Russian?</h2>
+          <div class="grid gap-3">
+          <label><input type="radio" name="q15" value="Kapkan"class="mr-2">Kapkan</label>
+          <label><input type="radio" name="q15" value="Sledge"class="mr-2">Sledge</label>
+          <label><input type="radio" name="q15" value="Lion"class="mr-2">Lion </label>
+          <label><input type="radio" name="q15" value="Glaz"class="mr-2">Glaz</label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center pt-6">
+        <button type="button" onclick="gradeQuiz()"
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition cursor-pointer">
+          Submit Answers
+
+           <!-- Result -->
+    <div id="quiz-score" class="mt-8 text-center text-xl font-bold hidden"></div>
+  </div>
+
+  <script>
+    function gradeQuiz() {
+      const answers = {
+        q1: "Sledge",
+        q2: "Black Eye Camera",
+        q3: "Pulse",
+        q4: "Explosive cluster charges",
+        q5: "Frost",
+        q6: "Warden",
+        q7: "Pulse",
+        q8: "Bandit",
+        q9: "Kapkan",
+        q10: "Fuze",
+        q11: "Ash",
+        q12: "Drones",
+        q13: "Doc",
+        q14: "Montagne",
+        q15: "Kapkan"
+      };
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      alert(`You scored ${score} out of ${total}!`);
+      location.reload()
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+        </button>
+      </div>
+    </form>
+
+</body>
+</html>

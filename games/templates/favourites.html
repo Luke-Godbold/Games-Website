@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favourites</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    {% include "components/navbar.html"%}
+    <body class="bg-neutral-700">
+
+              <!-- RIGHT COLUMN -->
+      <div class="space-y-6 p-10 flex justify-center">
+        <!-- Search Bar -->
+        <form method="POST" action="/favourites">
+            <input name ="op"type="text" placeholder="Search for an operator.."class="w-100 p-3 px-6 bg-white text-black rounded-md border border-gray-300 shadow" />
+            <button type="submit" class="rounded-md bg-green-400 px-7 py-3 font-bold text-black shadow-xs hover:bg-green-700 cursor-pointer">Add</button>  
+        </form>
+      </div>
+      <div class="flex justify-center">
+            {%if error%}
+                {%if error == {'error': 'You can only favourite an operator once'} or error == {'error': 'Operator not found'}%}
+                    <p class="text-red-400 ">{{error["error"]}}</p>
+                {%endif%}
+            {%endif%}
+      </div>    
+        
+        {%if names%}
+            {% for name in names%}
+                <div class="flex justify-center gap-20">
+                    <div>
+                        <a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators/{{ name | lower }}"><img  src = "{{ url_for('static', filename='High-resolution PNG' + '/' + name + '.png') }}" alt="{{name}}" class="w-25 pt-5"></a>
+                        <p class="text-center text-white font-semibold pb-10">{{name}}</p>
+                        <div class="rounded-md flex justify-around bg-blue-500 text-white font-bold py-3 px-4 shadow-xs hover:bg-blue-700 gap-10">
+                            <a href="/remove/{{name}}">Remove</a>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+            {%endfor%}
+        {%endif%}
+    </body>
+</html>

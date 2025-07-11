@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operators</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    {% include "components/navbar.html"%}
+    <body class="bg-neutral-700">
+        {%if op%}
+        <h1 class="text-white text-5xl font-bold text-center pt-20">{{op}}</h1>
+        {%else%}
+        <h1 class="text-white text-5xl font-bold text-center pt-20">Operators</h1>
+        {%endif%}
+        
+        <div class="flex text-white align-center justify-center gap-10 p-5">
+            <a href="/attackers" class="hover:underline bg-neutral-900 p-3">Attackers</a>
+            <a href="/defenders" class="hover:underline bg-neutral-900 p-3">Defenders</a>
+        </div>
+
+        <div class="flex flex-row-reverse flex-wrap justify-center items-center p-10">
+        {% for name in names%}
+            <div>
+                <a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/game-info/operators/{{ name | lower }}"><img  src = "{{ url_for('static', filename='High-resolution PNG' + '/' + name + '.png') }}" alt="{{name}}" class="w-25"></a>
+                <p class="text-center text-white font-semibold">{{name}}</p>
+            </div>
+        {%endfor%}
+        </div>
+    </body>
+</html>

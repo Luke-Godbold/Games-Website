@@ -1,0 +1,31 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <nav class="w-screen flex justify-between items-center align-center text-center bg-neutral-900 backdrop-blur-md p-4 shadow-md  text-white navbar flex flex-1">
+      <div class="flex justify-items-start flex-1">
+        <a href="/home"><img class="w-10 rounded-lg" src="{{ url_for('static', filename='logo2.png') }}" alt="Rainbow Siege" ></a>
+        <span class="text-xl font-bold">Rainbow Six Siege</span>
+      </div>  
+      <div class="space-x-10 text-align: center flex-1">
+        <a href="/home" class="hover:text-yellow-400 transition font-semibold ">Home</a>
+        <a href="/operators" class="hover:text-yellow-400 transition font-semibold ">Operators</a>
+        <a href="/quiz" class="hover:text-yellow-400 transition font-semibold ">Quiz</a>
+        <a href="/forum" class="hover:text-yellow-400 transition font-semibold ">Forum</a>
+        <a href="/favourites" class="hover:text-yellow-400 transition font-semibold ">Favourites</a>
+      </div>
+      <div class="flex flex-1 test justify-end">
+        {%if session["logged_in"] == True %}
+        <a href="/signout" class="hover:text-red-400 transition w-20 font-semibold ">Sign Out</a>
+        {%else%}
+        <a href="/signin" class="hover:text-green-400 transition w-20 font-semibold ">Sign In</a>
+        <a href="/signup" class="hover:text-blue-400 transition w-20 font-semibold ">Register</a>
+        {%endif%}
+      </div>
+    </nav>
+          
+            <!-- <div class="space-x-6"> -->
+
+          
+    
+      
+    
+ 
+    

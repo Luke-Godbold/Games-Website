@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>404 Page not found</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    
+    <body class="bg-neutral-700 text-black min-h-screen">
+    <h1 class="flex justify-center align-center text-center p-20 text-white font-extrabold text-7xl">404 PAGE NOT FOUND</h1>
+    <div class="bg-neutral-800 min-w-screen mx-auto">
+        
+        <div class="flex flex-col items-center text-center align-center justify-center p-5 font-extrabold text-xl">
+        <h2 class="flex justify-center align-center text-center p-5 text-white font-extrabold text-3xl">Here are some helpful links instead:</h2>    
+        <div class="text-white">
+            <ul>
+                <li><a href="/home" class="hover:text-yellow-400 transition font-medium hover:underline">Home</a></li>
+                <li><a href="/operators" class="hover:text-yellow-400 transition font-medium hover:underline">Operators</a></li>
+                <li><a href="/quiz" class="hover:text-yellow-400 transition font-medium hover:underline">Quiz</a></li>
+                <li><a href="/forum" class="hover:text-yellow-400 transition font-medium hover:underline">Forum</a></li>
+                <li><a href="/favourites" class="hover:text-yellow-400 transition font-medium hover:underline">Favourites</a></li>
+            </ul>
+        </div>    
+        
+        </div> 
+    </div>
+    
+    <div class="mx-auto min-w-screen flex items-center align-center justify-center gap-10">
+        <img src = "{{ url_for('static', filename='Sledge.png') }}" alt="Sledge" class="h-100 w-100">
+        <img src = "{{ url_for('static', filename='kapkan.png') }}" alt="kapkan" class="h-100 w-100">
+        <img src = "{{ url_for('static', filename='Tachanka.png') }}" alt="Tachanka" class="h-100 w-100">
+    </div>
+       
+
+    </body>
+
+</html>
